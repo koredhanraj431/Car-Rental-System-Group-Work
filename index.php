@@ -1,84 +1,101 @@
-<!doctype html>
+<?php
+
+session_start();
+error_reporting(0);
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+include('includes/config.php');
+
+$query = "SELECT * FROM admin_login where username='$username' && password='$password'";
+$result = mysqli_query($conn, $query) or die("failed".mysqli_error($conn));
+$row = mysqli_fetch_array($result);
+
+if(isset($_SESSION['username']))
+{
+    header("location: admin.php");
+    exit;
+}
+
+elseif($username == "admin" && $password == "admin@123"){
+    $_SESSION['username'] = $username;
+    $_SESSION['id'] = $row['id'];
+    header("location : admin.php");
+}
+
+if($username != "admin" && $password != "admin@123"){
+    echo '<script>alert("Invalid Credentials...")</script>';
+}
+
+?>
+
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="icon" href="images/favicon-16x16.png">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <title>Drive Your Dreams</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.php">Drive Your Dream</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutus.php">About us</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="signup.php">SIGNUP<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="login.php">LOGIN <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/mainImg.jpg" class="d-block w-100" alt="first slide">
-        </div>
-        <div class="carousel-item">
-          <img src="images/img2.jpg" class="d-block w-100" alt="second slide">
-        </div>
-        <div class="carousel-item">
-          <img src="images/img3.jpg" class="d-block w-100" alt="Third slide">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <footer id="footer">
-        <p>Made in love by TY-12</p>
-        <p>© Copyright 2018 Drive your DREAMS</p>
-    </footer>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: rgb(44, 40, 40);
+            text-decoration: none;
+
+        }
+
+        .admin-login {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        .box {
+            border: 6px solid white;
+            padding: 10px;
+            margin: 4px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        
+        .box p a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-fluid background text-white">
+
+
+        <section class="row justify-content-center">
+            <section class="col-12 col-sm-6 col-md-3 box">
+                <h1 class="admin-login">Admin Login</h1>
+                <form class="form-container" action="index.php" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Enter username</label>
+                        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Enter Password</label>
+                        <input type="password" name="password" class="form-control textbox" id="exampleInputPassword1" required>
+                    </div>
+
+                    <button type="submit" name="submit" style="margin-top: 5%;" class="btn btn-dark btn-block">Submit</button>
+
+                </form>
+                <p style="margin-top: 5%; text-align: center;">
+                    <a href="#">Back to Home</a>
+                </p>
+            </section>
+            
+        </section>
+    </section>
+</body>
+
 </html>
-
