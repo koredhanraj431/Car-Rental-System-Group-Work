@@ -7,6 +7,8 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" href="images/favicon-16x16.png">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="CSS/contactStyles.css">
     <title>Contact us</title>
   </head>
   <body>
@@ -33,14 +35,36 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="signup.php">REGISTER<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="signup.php">Register<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="login.php">LOGIN <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <h1>Welcome to Customer Support!</h1>
+    <hr>
+    <div class="container table-responsive py-5">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Contact Information</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phone Number: +91-7058944925</td>
+          </tr>
+          <tr>
+            <td>Email: driveyourdreams@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Residential Address: Block-11, Chintamani Apartment, Near VIT college, Pune, Maharashtra, India - 411037</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 style="margin-top: 50px;"><i class="fal fa-grin"></i> PS: Feel free to contact us, Suggestions will always be appreciated.</h4>
+    </div>
   </body>
 </html>
