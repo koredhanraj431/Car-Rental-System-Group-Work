@@ -20,17 +20,7 @@
       text-align: center;
       font-weight: bold;
     }
-    .elements li {
-      padding: 4px;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .elements li a:hover {
-      background-color: white;
-      border-radius: 10px;
-      transition: .5s;
-    }
+    
   </style>
 </head>
 
@@ -43,25 +33,25 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto elements">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item ">
-            <a class="nav-link text-primary" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="aboutus.php">About us</a>
+            <a class="nav-link " href="aboutus.php">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="contact.php">Contact us</a>
+            <a class="nav-link " href="contact.php">Contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="carvarieties.php">Explore cars</a>
+            <a class="nav-link" href="carvarieties.php">Explore cars</a>
           </li>
         
           <li class="nav-item">
-            <a class="nav-link text-primary" href="signup.php">REGISTER</a>
+            <a class="nav-link " href="signup.php">REGISTER</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-primary" href="login.php">LOGIN</a>
+            <a class="nav-link " href="login.php">LOGIN</a>
           </li>
         </ul>
       </div>
