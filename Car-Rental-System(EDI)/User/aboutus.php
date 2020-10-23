@@ -47,24 +47,26 @@
         </div>
       </div>
     </nav>
-    <h1>About Us </h1>
-    <div class="row">
-      <div class="col-lg-4">
-        <i class="icons fas fa-check-circle fa-5x"></i>
-        <h3>Easy to use.</h3>
-        <p>So easy to use, even your Grandpa could book cars.</p>
-      </div>
+    <h1 style="text-align: center; margin: 30px; font-size: 50px;">About Us</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <i class="icons fas fa-check-circle fa-5x py-3"></i>
+          <h3>Easy to use</h3>
+          <p>So easy to use, even your Grandpa could book cars.</p>
+        </div>
 
-      <div class="col-lg-4">
-        <i class="icons custIcon fas fa-bullseye fa-5x"></i>
-        <h3>Elite Varieties</h3>
-        <p>We have all the cars, the greatest cars.</p>
-      </div>
+        <div class="col-lg-4">
+          <i class="icons custIcon fas fa-bullseye fa-5x py-3"></i>
+          <h3>Elite Varieties</h3>
+          <p>We have all the cars, the greatest cars.</p>
+        </div>
 
-      <div class="col-lg-4">
-        <i class="icons custIcon fas fa-heart fa-5x"></i>
-        <h3>Guaranteed to be on time.</h3>
-        <p>Find the love of driving life or your money back.</p>
+        <div class="col-lg-4">
+          <i class="icons custIcon fas fa-heart fa-5x py-3"></i>
+          <h3>Guaranteed to be on time.</h3>
+          <p>Find the love of driving life or your money back.</p>
+        </div>
       </div>
     </div>
   </body>
