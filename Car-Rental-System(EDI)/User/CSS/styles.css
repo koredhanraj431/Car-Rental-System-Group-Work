@@ -12,3 +12,11 @@
 .nav-item{
   padding: 0 18px;
 }
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-menu a {
+  color: white;
+} 
