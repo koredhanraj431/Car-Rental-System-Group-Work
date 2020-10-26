@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+  $_SESSION['msg'] = "You must log in first";
+  header('location: index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +28,7 @@
 <body>
     <header>
         <?php
-        include('header.php');
+        include('Includes/header.php');
         ?>
     </header>
 
