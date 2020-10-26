@@ -26,6 +26,11 @@
     <link rel="icon" href="images/favicon-16x16.png">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Drive Your Dreams</title>
+    <style media="screen">
+    .img-circle:hover{
+      transform: rotate(180deg);
+    }
+    </style>
   </head>
   <body>
     <!-- navbar -->
