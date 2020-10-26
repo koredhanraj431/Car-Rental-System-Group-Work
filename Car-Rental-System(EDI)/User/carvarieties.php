@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" href="images/favicon-16x16.png">
     <title>Explore cars</title>
+    <style media="screen">
+      .image:hover{
+        transform: scale(1.2);
+      }
+    </style>
   </head>
   <body>
     <!-- navbar -->
@@ -54,63 +59,68 @@
       <div class="container-explore" style="text-align: center;">
         <div class="row">
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 250px;" src="images/car3.jpg" alt="" >
+            <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car3.jpg" alt="" >
             <h2 style="">Economy</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Economy" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 250px;" src="images/car7.jpg" alt="" >
+            <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car7.jpg" alt="" >
             <h2 style="">Standard</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Standard" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 250px;" src="images/car6.jpg" alt="" >
+            <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car6.jpg" alt="" >
             <h2 style="">Standard SUV</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Standard SUV" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 250px;" src="images/car11.jpg" alt="" >
+            <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car11.jpg" alt="" >
             <h2 style="">Premium</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Premium" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 200px;" src="images/car2.png" alt="" >
+            <img class="image" style="border-radius: 6px; height: 140px; width: 200px;" src="images/car2.png" alt="" >
             <h2 style="">PickUp</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Pickup" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 200px;" src="images/car4.png" alt="" >
+            <img class="image" style="border-radius: 6px; height: 140px; width: 200px;" src="images/car4.png" alt="" >
             <h2 style="">Minivan</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Minivan" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 200px;" src="images/car5.png" alt="" >
+            <img class="image" style="border-radius: 6px; height: 140px; width: 200px;" src="images/car5.png" alt="" >
             <h2 style="">Traveller</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Traveller" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
-            <img style="border-radius: 6px; height: 140px; width: 180px;" src="images/car9.jpg" alt="" >
+            <img class="image"  style="border-radius: 6px; height: 140px; width: 180px;" src="images/car9.jpg" alt="" >
             <h2 style="">Stylish</h2>
             <p>
-              <a class="btn btn-default" href="Allcars.php/#Stylish" role="button" style="border-color: #000;">View availability>></a>
+              <a class="btn btn-default" href="#" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
         </div>
       </div>
     </div>
+    <footer>
+      <?php
+        include('includes\footer.php');
+      ?>
+    </footer>
   </body>
 </html>
