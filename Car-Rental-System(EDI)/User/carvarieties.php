@@ -1,3 +1,7 @@
+<?php 
+include('Includes/server.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
