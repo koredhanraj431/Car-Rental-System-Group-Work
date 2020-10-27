@@ -533,6 +533,8 @@
     <br>
     <br>
 
-
+  <footer class="p-2">
+    <p class="p-3 bg-dark text-white text-center"> Copyright © 2020 Drive your Dreams. All rights reserved.</p>
+  </footer>
 </body>
 </html>
