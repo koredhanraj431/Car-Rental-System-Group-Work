@@ -1,8 +1,8 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
-  $_SESSION['msg'] = "You must log in first";
-  header('location: index.php');
+if (isset($_SESSION['username']) && strlen($_SESSION['success'])>0) {
+  header('location: user.php');
+  exit();
 }
 
 ?>
