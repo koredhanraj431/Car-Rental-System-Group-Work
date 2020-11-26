@@ -8,11 +8,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <header>
-    <?php
-      include('Includes\header.php');
-    ?>
-  </header>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="icon" href="images/favicon-16x16.png">
 </head>
 <body>
 
@@ -24,7 +24,6 @@
   <hr>
   <table class="table table-hover">
     <thead>
-
       <tr>
         <th>Make & Model</th>
         <th>Year</th>
@@ -33,7 +32,6 @@
         <th>Status</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
         <td>Ford Fiesta</td>
@@ -57,7 +55,6 @@
         <td>500/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Kia Morning</td>
@@ -66,7 +63,6 @@
         <td>500/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Toyota Yaris</td>
@@ -75,18 +71,11 @@
         <td>500/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
     </tbody>
   </table>
 </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br><br><br>
 
 <div class="container" id="Standard">
   <hr>
@@ -102,7 +91,6 @@
         <th>Status</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
         <td>Ford Fusion</td>
@@ -125,7 +113,6 @@
         <td>700/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Kia Optima</td>
@@ -134,7 +121,6 @@
         <td>700/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Toyota Canny</td>
@@ -142,7 +128,6 @@
         <td>5</td>
         <td>700/-</td>
         <td style="color:red;">Rented</td>
-
       </tr>
     </tbody>
   </table>
@@ -192,7 +177,6 @@
         <td>1000/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Kia K900</td>
@@ -201,7 +185,6 @@
         <td>1000/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Lexus ES</td>
@@ -210,7 +193,6 @@
         <td>1000/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td> Tesla Model S</td>
@@ -533,8 +515,6 @@
     <br>
     <br>
 
-  <footer class="p-2">
-    <p class="p-3 bg-dark text-white text-center"> Copyright © 2020 Drive your Dreams. All rights reserved.</p>
-  </footer>
+
 </body>
 </html>
