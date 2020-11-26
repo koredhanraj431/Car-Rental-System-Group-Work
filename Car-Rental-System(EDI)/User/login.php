@@ -1,4 +1,3 @@
-
 <?php
 include('Includes/server.php');
 
@@ -52,5 +51,6 @@ if (isset($_SESSION['username'])) {
     		Not yet a member? <a href="register.php">Sign up</a>
     	</p>
     </form>
+    
   </body>
 </html>
