@@ -21,8 +21,7 @@ if (!isset($_SESSION['username'])) {
   <script src="https://kit.fontawesome.com/3695790714.js" crossorigin="anonymous"></script>
   <link rel="icon" href="images/favicon-16x16.png">
   <link rel="stylesheet" href="CSS/styles.css">
-  <title>Welcome, <?php  echo $_SESSION["username"]; ?></title>
-
+  <title>Welcome to Drive your Dreams</title>
 </head>
 
 <body>
@@ -39,34 +38,36 @@ if (!isset($_SESSION['username'])) {
   ?>
 
   <!-- container marketing -->
-  <div class="container marketing d-flex justify-content-center">
+  <div class="container marketing d-flex justify-content-center py-5 mt-5 mb-3">
     <div class="row py-4">
-      <div class="col-lg-4">
+      <div class="col-lg-4 ">
         <img class="img-circle" src="images/explore.png" alt="Explore">
-        <h2>Explore</h2>
+        <h2 class="mt-2">Explore</h2>
         <p></p>
         <p>
-          <a class="btn btn-default btn-outline-success" href="carvarieties.php" role="button">View details>></a>
+          <a type="button" class="btn btn-outline-success" href="carvarieties.php" role="button">View details >></a>
         </p>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 ">
         <img class="img-circle" src="images/contact.png" alt="Contact">
-        <h2>Contact</h2>
+        <h2 class="mt-2">Contact</h2>
         <p></p>
         <p>
-          <a class="btn btn-default btn-outline-success" href="contact.php" role="button">View details>></a>
+          <a type="button" class="btn btn-outline-success" href="contact.php" role="button">View details >></a>
         </p>
       </div>
       <div class="col-lg-4">
         <img class="img-circle" src="images/about.jpg" alt="about us">
-        <h2>AboutUs</h2>
+        <h2 class="mt-2">AboutUs</h2>
         <p></p>
         <p>
-          <a class="btn btn-default btn-outline-success" href="aboutus.php" role="button">View details>></a>
+          <a type="button" class="btn btn-outline-success" href="aboutus.php" role="button">View details >></a>
         </p>
       </div>
     </div>
   </div>
+
+
   <footer>
     <?php
       include('includes/footer.php');
@@ -77,7 +78,6 @@ if (!isset($_SESSION['username'])) {
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  
 </body>
 
 </html>
