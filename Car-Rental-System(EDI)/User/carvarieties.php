@@ -1,7 +1,6 @@
-<?php
+<?php 
 include('Includes/server.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,16 +10,13 @@ include('Includes/server.php');
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="CSS/styles.css">
+
     <title>Explore cars</title>
-    <style media="screen">
-      .image:hover{
-        transform: scale(1.2);
-      }
-    </style>
   </head>
   <body>
     <!-- navbar -->
-    <?php
+    <?php 
   if (strlen($_SESSION['username'])==0){
     include('Includes/navbar.php');
   }
@@ -40,56 +36,56 @@ include('Includes/server.php');
         <div class="row">
           <div class="col-lg-3">
             <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car3.jpg" alt="" >
-            <h2 style="">Economy</h2>
+            <h2 >Economy</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Economy" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
             <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car7.jpg" alt="" >
-            <h2 style="">Standard</h2>
+            <h2 >Standard</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Standard" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
             <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car6.jpg" alt="" >
-            <h2 style="">Standard SUV</h2>
+            <h2 >Standard SUV</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Premium" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
             <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="images/car11.jpg" alt="" >
-            <h2 style="">Premium</h2>
+            <h2 >Premium</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Traveller" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
             <img class="image" style="border-radius: 6px; height: 140px; width: 200px;" src="images/car2.png" alt="" >
-            <h2 style="">PickUp</h2>
+            <h2 >PickUp</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Standard SUV" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
             <img class="image" style="border-radius: 6px; height: 140px; width: 200px;" src="images/car4.png" alt="" >
-            <h2 style="">Minivan</h2>
+            <h2 >Minivan</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Pickup" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
             <img class="image" style="border-radius: 6px; height: 140px; width: 200px;" src="images/car5.png" alt="" >
-            <h2 style="">Traveller</h2>
+            <h2 >Traveller</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Minivan" role="button" style="border-color: #000;">View availability>></a>
             </p>
           </div>
           <div class="col-lg-3">
             <img class="image"  style="border-radius: 6px; height: 140px; width: 180px;" src="images/car9.jpg" alt="" >
-            <h2 style="">Stylish</h2>
+            <h2 >Stylish</h2>
             <p>
               <a class="btn btn-outline-success" href="Allcars.php/#Stylish" role="button" style="border-color: #000;">View availability>></a>
             </p>
@@ -97,10 +93,14 @@ include('Includes/server.php');
         </div>
       </div>
     </div>
-    <footer>
-      <?php
-        include('includes\footer.php');
-      ?>
-    </footer>
+  
+   <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ 
+  
   </body>
 </html>
+
