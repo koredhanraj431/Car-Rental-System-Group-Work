@@ -12,10 +12,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/3695790714.js" crossorigin="anonymous"></script>
   <link rel="icon" href="images/favicon-16x16.png">
+  <link rel="stylesheet" href="CSS/styles.css">
+
 </head>
 <body>
-
 <h1 style="text-align:center; color:Brown;"> Welcome to the wide Range of Cars! </h1>
 <div class="container" id="Economy">
   <hr>
@@ -76,7 +78,6 @@
   </table>
 </div>
 <br><br><br><br><br><br>
-
 <div class="container" id="Standard">
   <hr>
   <h1 style="text-align:center; color:green;">Standard</h1>
@@ -132,14 +133,12 @@
     </tbody>
   </table>
 </div>
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 <div class="container" id="Premium">
   <hr>
   <h1 style="text-align:center; color:green;">Premium</h1>
@@ -154,7 +153,6 @@
         <th>Status</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
         <td>Audi A4</td>
@@ -204,7 +202,6 @@
     </tbody>
   </table>
 </div>
-
 <br>
 <br>
 <br>
@@ -225,7 +222,6 @@
         <th>Status</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
         <td>Dodge Grand Caravan</td>
@@ -248,7 +244,6 @@
         <td>900/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Mercedes-Benz Sprinter</td>
@@ -257,20 +252,16 @@
         <td>900/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
-
     </tbody>
   </table>
 </div>
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 <div class="container" id="Standard SUV">
   <hr>
   <h1 style="text-align:center; color:green;">Standard SUV</h1>
@@ -285,7 +276,6 @@
         <th>Status</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
         <td>Ford Explorer</td>
@@ -309,7 +299,6 @@
         <td>1000/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Toyota Highlander</td>
@@ -317,19 +306,16 @@
         <td>7</td>
         <td>1000/-</td>
         <td style="color:red;">Rented</td>
-
       </tr>
     </tbody>
   </table>
 </div>
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 <div class="container" id="Pickup">
   <hr>
   <h1 style="text-align:center; color:green;">Pickup</h1>
@@ -344,7 +330,6 @@
         <th>Status</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
         <td>Chevrolet Silverado</td>
@@ -367,7 +352,6 @@
         <td>4</td>
         <td>500/-</td>
         <td style="color:red;">Rented</td>
-
       </tr>
       <tr>
         <td>Nissan Titan</td>
@@ -376,7 +360,6 @@
         <td>500/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
       <tr>
         <td>Toyota Tundra</td>
@@ -385,19 +368,16 @@
         <td>500/-</td>
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
-
       </tr>
     </tbody>
   </table>
 </div>
-
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-
 <div class="container" id="Minivan">
   <hr>
   <h1 style="text-align:center; color:green;">Minivan</h1>
@@ -412,7 +392,6 @@
         <th>Status</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
         <td>Chevrolet City Express</td>
@@ -436,18 +415,15 @@
         <td style="color:green;">Available</td>
         <td><a href="">Reserve This Car</a> </td>
       </tr>
-
     </tbody>
     </table>
     </div>
-
     <br>
     <br>
     <br>
     <br>
     <br>
     <br>
-
     <div class="container" id="Stylish">
       <hr>
       <h1 style="text-align:center; color:green;">Stylish</h1>
@@ -462,7 +438,6 @@
             <th>Status</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>Bentley Continental GT Speed</td>
@@ -486,7 +461,6 @@
             <td>2000/-</td>
             <td style="color:green;">Available</td>
             <td><a href="">Reserve This Car</a> </td>
-
           </tr>
           <tr>
             <td>McLaren 650S</td>
@@ -495,7 +469,6 @@
             <td>2000/-</td>
             <td style="color:red;">Rented</td>
           </tr>
-
           <tr>
             <td>Porsche 911 Carrera GTS</td>
             <td>2018</td>
@@ -503,11 +476,9 @@
             <td>2000/-</td>
             <td style="color:red;">Rented</td>
           </tr>
-
         </tbody>
       </table>
     </div>
-
     <br>
     <br>
     <br>
@@ -515,6 +486,9 @@
     <br>
     <br>
 
-
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
 </body>
 </html>
