@@ -184,7 +184,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="cta-text">
                                 <h4>Find us</h4>
-                                <span>Block-11,Near VIT college,Pune,India-411037</span>
+                                <span>11,Near VIT college,Pune,India-411037</span>
                             </div>
                         </div>
                     </div>
