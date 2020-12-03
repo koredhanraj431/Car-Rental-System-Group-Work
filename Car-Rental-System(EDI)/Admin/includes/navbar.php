@@ -69,6 +69,9 @@
             <a class="nav-link text-primary" href="#">Bookings</a>
           </li>
           <li class="nav-item">
+          <a class="nav-link text-primary" href="addcars.php">Add Cars</a>
+        </li>
+          <li class="nav-item">
             <a class="nav-link text-primary" href="#">Manage Cars</a>
           </li>
           <li class="nav-item">
