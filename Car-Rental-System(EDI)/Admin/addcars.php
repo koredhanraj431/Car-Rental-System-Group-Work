@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('includes/config.php');
+include('../Includes/config.php');
 if (strlen($_SESSION['username']) == 0) {
     header('location:index.php');
 } else {
@@ -167,7 +167,6 @@ if (strlen($_SESSION['username']) == 0) {
                 reader.addEventListener("load", function() {
                     previewImage.setAttribute("src", this.result);
                 });
-
                 reader.readAsDataURL(file);
             } else {
                 previewdeftext.style.display = "null";

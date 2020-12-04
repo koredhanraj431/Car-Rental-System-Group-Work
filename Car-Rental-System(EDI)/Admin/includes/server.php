@@ -5,7 +5,7 @@ session_start();
 $username = "";
 $errors = array();
 
-include('includes/config.php');
+include('../Includes/config.php');
 
 if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($dbh, $_POST['username']);
@@ -19,10 +19,10 @@ if (isset($_POST['submit'])) {
     }
 
     if (count($errors) == 0) {
-        $query = "SELECT * FROM admin_login WHERE username='$username' AND password='$password'";
+        $query = "SELECT * FROM admin_login WHERE uname='$username' AND pwd='$password'";
         $results = mysqli_query($dbh, $query);
         if (mysqli_num_rows($results) == 1) {
-            $_SESSION['username'] = $username;
+            $_SESSION['uname'] = $username;
             header('location: admin.php');
             exit();
         } else {

@@ -1,7 +1,7 @@
-<?php 
-include('includes/config.php');
+<?php
+include('../Includes/config.php');
 include('includes/server.php');
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +59,7 @@ include('includes/server.php');
                 <form class="form-container" action="index.php" method="post">
 
                     <?php
-                    include('Includes/errors.php');
+                    include('../Includes/config.php');
                     ?>
 
                     <div class="form-group">
