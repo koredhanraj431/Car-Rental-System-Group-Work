@@ -12,21 +12,29 @@
 
 .dropdown-menu a {
   color: white;
-} 
+}
 
 .img-circle{
   height: 140px;
   width: 140px;
   border-radius: 50%;
 }
-.img-circle:hover{
-  transform: rotate(180deg);
+.col-lg-4 img {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
-.btn-default{
-  color: #333;
-  background-color: #fff;
-  border-color: #000;
+
+.col-lg-4:hover img {
+    border-radius: 50%;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
-.image:hover{
-  transform: scale(1.2);
+.row{
+  padding: 30px;
 }
