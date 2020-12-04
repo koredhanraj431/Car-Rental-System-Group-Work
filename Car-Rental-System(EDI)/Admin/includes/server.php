@@ -5,7 +5,7 @@ session_start();
 $username = "";
 $errors = array();
 
-include('../Includes/config.php');
+include('includes/config.php');
 
 if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($dbh, $_POST['username']);

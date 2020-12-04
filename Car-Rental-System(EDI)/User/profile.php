@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
 
         <h3>Personal info</h3>
 
-        <form class="form-horizontal" role="form">
+        <form action="" class="form-horizontal" role="form" method="POST">
           <div class="form-group">
             <label class="col-lg-3 control-label">First name:</label>
             <div class="col-lg-8">
@@ -91,7 +91,7 @@ if (!isset($_SESSION['username'])) {
           <div class="form-group">
             <label class="col-md-3 control-label">Username :</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" value="dhanraj_1999" required readonly>
+              <input class="form-control" type="text" value="dhanraj1999" required readonly>
             </div>
           </div>
           
@@ -134,6 +134,8 @@ if (!isset($_SESSION['username'])) {
             </div>
           </div>
         </form>
+
+      
       </div>
     </div>
   </div>

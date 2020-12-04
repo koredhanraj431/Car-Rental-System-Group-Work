@@ -46,7 +46,7 @@ include('Includes/server.php');
       </table>
       <h4 style="margin-top: 50px;"><i class="fal fa-grin"></i> PS: Feel free to contact us, Suggestions will always be appreciated.</h4>
     </div>
-  <footer>
+    <footer>
     <?php
       include('includes/footer.php');
     ?>

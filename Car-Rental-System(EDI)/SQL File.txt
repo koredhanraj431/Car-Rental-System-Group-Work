@@ -1,0 +1,39 @@
+
+
+Table structure for table `cars`
+--
+
+CREATE TABLE IF NOT EXISTS `cars` (
+  `car_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_name` varchar(255) NOT NULL,
+  `car_type` varchar(255) NOT NULL,
+  `image` text NOT NULL,
+  `hire_cost` int(11) NOT NULL,
+  `capacity` int(11) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  PRIMARY KEY (`car_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+
+INSERT INTO `cars` (`car_id`, `car_name`, `car_type`, `image`, `hire_cost`, `capacity`, `status`) VALUES
+(1, 'Mercedes Benz', 'Mercedes Benz', 'car1.jpg', 20000, 5, 'Available'),
+(2, 'Range Rover', 'LandRover', 'car2.jpg', 30000, 6, 'Available'),
+(3, 'Harrier', 'Toyota', 'car3.jpg', 20000, 6, 'Available'),
+(5, 'LandCruiser V8', 'LandCruiser ', 'images (2).jpg', 20000, 5, 'Available'),
+(6, 'Security Vehicles', 'Hammar Cars', 'sonkort2.png', 30000, 8, 'Available'),
+(7, 'Wedding Limousine', 'Wedding Limousine', 'images (3).jpg', 50000, 10, 'Available');
+
+User Login:
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+Admin Login :
+
+CREATE TABLE `carrental`.`admin_login` ( `id` INT NOT NULL , `uname` VARCHAR(10) NOT NULL , `pwd` VARCHAR(10) NOT NULL ) ENGINE = InnoDB;
+INSERT INTO `admin_login` (`id`, `uname`, `pwd`) VALUES ('1', 'admin', 'admin@123');
+
+CREATE TABLE `carrental`.`users` ( `id` INT(10) NOT NULL , `username` VARCHAR(20) NOT NULL , `email` VARCHAR(15) NOT NULL , `password` VARCHAR(10) NOT NULL ) ENGINE = InnoDB;

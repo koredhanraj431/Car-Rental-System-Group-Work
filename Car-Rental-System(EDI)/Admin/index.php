@@ -1,6 +1,11 @@
 <?php
-include('../Includes/config.php');
+include('includes/config.php');
 include('includes/server.php');
+
+if(!strlen($_SESSION['uname'])==0)
+	{	
+header('location:admin.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -54,12 +59,15 @@ include('includes/server.php');
 
 
         <section class="row justify-content-center">
+
+
             <section class="col-12 col-sm-6 col-md-3 box">
                 <h1 class="admin-login">Admin Login</h1>
+
                 <form class="form-container" action="index.php" method="post">
 
                     <?php
-                    include('../Includes/config.php');
+                    include('Includes/errors.php');
                     ?>
 
                     <div class="form-group">

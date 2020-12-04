@@ -70,7 +70,7 @@ include('Includes/server.php');
     </div>
   </div>
 
-<footer>
+  <footer>
     <?php
       include('includes/footer.php');
     ?>

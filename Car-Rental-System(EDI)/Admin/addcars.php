@@ -2,7 +2,7 @@
 session_start();
 
 include('../Includes/config.php');
-if (strlen($_SESSION['username']) == 0) {
+if (strlen($_SESSION['uname']) == 0) {
     header('location:index.php');
 } else {
     include('includes/navbar.php');
@@ -20,79 +20,22 @@ if (strlen($_SESSION['username']) == 0) {
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="icon" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="./includes/styles.css">
     <style>
-        form,
-        .content {
-            width: 50%;
-            margin: 0px auto;
-            padding: 20px;
-            border: 3px solid #B0C4DE;
-            background: white;
-            border-radius: 0px 0px 10px 10px;
-        }
-
-        .input-group {
-            margin: 10px 0px 10px 0px;
-        }
-
-        .input-group label {
-            display: block;
-            text-align: left;
-            margin: 3px;
-        }
-
-        .input-group input {
-            height: 30px;
-            width: 93%;
-            padding: 5px 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid gray;
-        }
-
-        .btn {
-            padding: 10px;
-            font-size: 15px;
-            color: white;
-            background: #5F9EA0;
+        form {
             border: none;
-            border-radius: 5px;
         }
-
-        .addcar {
-            margin-top: 100px;
-        }
-
-        .container {
-            width: 100%;
-        }
-
-        .Image-Preview {
-            width: 300px;
-            min-height: 100px;
-            border: 2px solid black;
-            border-radius: 5px;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            color: #cccccc;
-        }
-
-        .Image-Preview__image {
-            display: none;
-            width: 100%;
-        }
-
     </style>
-
 </head>
 
 <body>
+<div class="header">
+						<h2>Add New Cars here!</h2>
+					</div>
 
-    <form act ion="" class="addcar" method="post" enctype="multipart/form-data">
-       
+    <form action="" class="form-horizontal addcar" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
         <div>
             <label>Select Car Image to upload : </label>
             <input type="file" src="#" accept="image/*" name="image" id="image" width="150px" required>
@@ -102,27 +45,40 @@ if (strlen($_SESSION['username']) == 0) {
             <img src="" alt="Image Preview" class="Image-Preview__image">
             <span class="Image-Preview__default-text">Image Preview</span>
         </div>
-        <div class="input-group">
-            <label>Car Name : </label>
-            <input type="text" name="car_name" required>
         </div>
-        <div class="input-group">
-            <label>Car Type : </label>
-            <input type="text" name="car_type" required>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Car name:</label>
+            <div class="col-lg-8">
+                <input class="form-control" type="text" name="car_name" required>
+            </div>
         </div>
-        <div class="input-group">
-            <label>Capacity : </label>
-            <input type="text" name="capacity" required>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Car Type : </label>
+            <div class="col-lg-8">
+                <input class="form-control" type="text" name="car_type" required>
+            </div>
         </div>
-        <div class="input-group">
-            <label>Hire Cost : </label>
-            <input type="text" name="cost" required>
-        </div>
-        <div class="input-group">
-            <button type="submit" class="btn" name="addcar">Add Car</button>
-        </div>
-    </form>
 
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Capacity : </label>
+            <div class="col-lg-8">
+                <input class="form-control" name="capacity" type="text" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 control-label">Hire Cost : </label>
+            <div class="col-md-8">
+                <input class="form-control" name="cost" type="text" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+                <button type="submit" class="btn" name="addcar">Add Car</button>
+            </div>
+    </form>
     <?php
     if (isset($_POST['addcar'])) {
 

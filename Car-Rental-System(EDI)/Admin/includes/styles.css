@@ -1,0 +1,74 @@
+form,
+        .content {
+            width: 50%;
+            margin: 0px auto;
+            padding: 20px;
+            border: 3px solid #B0C4DE;
+            background: white;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        .input-group {
+            margin: 10px 0px 10px 0px;
+        }
+
+        .input-group label {
+            display: block;
+            text-align: left;
+            margin: 3px;
+        }
+
+        .input-group input {
+            height: 30px;
+            width: 93%;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .btn {
+            padding: 10px;
+            font-size: 15px;
+            color: white;
+            background: #5F9EA0;
+            border: none;
+            border-radius: 5px;
+           font-weight: bold;
+        } 
+        .addcar {
+            margin-top: 25px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .Image-Preview {
+            width: 300px;
+            min-height: 100px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #cccccc;
+        }
+
+        .Image-Preview__image {
+            display: none;
+            width: 100%;
+        }
+
+        .header {
+            width: 50%;
+            margin: 50px auto 0px;
+            text-align: center;
+            padding: 20px;
+          }
+        .header h2{
+            color: rgb(235, 68, 62);
+            font-weight: bold;
+        }

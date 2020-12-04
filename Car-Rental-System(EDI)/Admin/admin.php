@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include('../Includes/config.php');
-if(strlen($_SESSION['username'])==0)
+include('includes/config.php');
+if(strlen($_SESSION['uname'])==0)
 	{	
 header('location:index.php');
 }

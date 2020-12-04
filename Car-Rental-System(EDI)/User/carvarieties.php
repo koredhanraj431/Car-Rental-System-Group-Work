@@ -1,12 +1,6 @@
-<?php
-session_start();
+<?php 
 include('Includes/server.php');
-
-if (!isset($_SESSION['username'])) {
-  header('location: login.php');
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

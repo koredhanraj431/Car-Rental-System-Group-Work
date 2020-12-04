@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('../Includes/config.php');
 
 // initializing variables
 $username = "";
@@ -7,7 +8,7 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'cr');
+$db = mysqli_connect('localhost', 'root', '', 'carrental');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
