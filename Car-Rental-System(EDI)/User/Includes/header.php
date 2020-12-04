@@ -35,7 +35,7 @@
                         <a class="dropdown-item" href="profile.php">Profile Settings</a>
                         <a class="dropdown-item" href="updpwd.php">Update Password </a>
                         <a class="dropdown-item" href="#">My Bookings</a>
-                        <a class="dropdown-item" href="#">Post A Testimonal</a>
+                        <a class="dropdown-item" href="PostTestimonial.php">Post A Testimonal</a>
                         <a class="dropdown-item" href="#">My Testimonal</a>
                         <a class="dropdown-item" href="logout.php?logout-submit=logout">Logout</a>
                     </div>
