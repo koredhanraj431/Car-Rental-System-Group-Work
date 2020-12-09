@@ -14,14 +14,51 @@ CREATE TABLE IF NOT EXISTS `cars` (
   PRIMARY KEY (`car_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
+//Cars
 
 INSERT INTO `cars` (`car_id`, `car_name`, `car_type`, `image`, `hire_cost`, `capacity`, `status`) VALUES
-(1, 'Mercedes Benz', 'Mercedes Benz', 'car1.jpg', 20000, 5, 'Available'),
-(2, 'Range Rover', 'LandRover', 'car2.jpg', 30000, 6, 'Available'),
-(3, 'Harrier', 'Toyota', 'car3.jpg', 20000, 6, 'Available'),
-(5, 'LandCruiser V8', 'LandCruiser ', 'images (2).jpg', 20000, 5, 'Available'),
-(6, 'Security Vehicles', 'Hammar Cars', 'sonkort2.png', 30000, 8, 'Available'),
-(7, 'Wedding Limousine', 'Wedding Limousine', 'images (3).jpg', 50000, 10, 'Available');
+(1, 'Chevrolet Cruz', 'Economy', 'E1.jpg', 5500, 5, 'Available'),
+(2, 'Symbol', 'Economy', 'E2.jpg', 5500, 5, 'Available'),
+(3, 'Nissan Leaf', 'Economy', 'E3.jpg', 5000, 5, 'Available'),
+(4, 'Chevrolet Aveo', 'Economy ', 'E4.jpg',6000, 5, 'Available'),
+(5, 'Chevrolet Beat', 'Economy', 'E5.jpg', 5500, 5, 'Available');
+(6, 'Maruti Suzuki Eeco', 'MiniVan', 'M1.jpg', 6000, 6, 'Available'),
+(7, 'Maruti Suzuki XL6', 'MiniVan', 'M2.jpg', 6500, 8, 'Available'),
+(8, 'Maruti Suzuki Ertiga', 'MiniVan', 'M3.jpg', 6050, 7, 'Available'),
+(9, 'Maruti Suzuki Omni', 'MiniVan ', 'M4.jpg', 6000, 6, 'Available'),
+(10, 'Chevrolet Enjoy', 'MiniVan', 'M5.jpg', 6500, 8, 'Available');
+(11, 'Tata Yodha Pickup', 'PickUp', 'Pi1.jpg', 7000, 2, 'Available'),
+(12, 'Mahindra Bolero Maxi Truck', 'PickUp', 'Pi2.jpg',6500, 3, 'Available'),
+(13, 'Mahindra Imperio', 'PickUp', 'Pi3.jpg', 7000, 2, 'Available'),
+(14, 'Toyota Tacoma', 'PickUp', 'Pi4.png', 6500, 3, 'Available'),
+(15, 'Mahindra Bolero Pik-Up', 'PickUp', 'Pi5.jpg',7500, 2, 'Available');
+(16, 'Volvo XC60', 'Premium', 'Pr1.jpg', 8500, 5, 'Available'),
+(17, 'Volvo V90', 'Premium', 'Pr2.jpg', 8000, 5, 'Available'
+(18, 'Mercedes-Benz C-Class', 'Premium', 'Pr3.png', 8500, 5, 'Available'),
+(19, 'Mercedes-Benz S-Class', 'Premium ', 'Pr4.png', 8000, 5, 'Available'),
+(20, 'Mercedes-Benz E-Class', 'Premium', 'Pr5.jpg', 9000, 5, 'Available');
+(21, 'Hyundai Verna', 'Standard', 'std1.jpg', 6000, 5, 'Available'),
+(22, 'Toyota Artis', 'Standard', 'std2.jpg', 6500, 5, 'Available'),
+(23, 'Renault Pulse', 'Standard', 'std3.png', 6500, 4, 'Available'),
+(24, 'Suzuki Baleno', 'Standard', 'std4.png', 6000, 5, 'Available'),
+(25, 'Nissan Micra', 'Standard', 'std5.png', 6500, 5, 'Available'),
+(26, 'TATA Tiago', 'Standard', 'std6.jpg', 5500, 5, 'Available');
+(27, 'Maruti Suzuki Vitara Brezza', 'StandardSUV', 'stdSUV1.png', 7000, 6, 'Available'),
+(28, 'KIA Seltos', 'StandardSUV', 'stdSUV2.jpg', 7500, 6, 'Available'),
+(29, 'Mahindra Scorpio', 'StandardSUV', 'stdSUV3.jpg', 7500, 7, 'Available'),
+(30, 'Hyundai Creta', 'StandardSUV', 'stdSUV4.jpg', 7000, 7, 'Available'),
+(31, 'TATA Nexon', 'StandardSUV', 'stdSUV5.jpg', 7500, 6, 'Available');
+(32, 'BMW-3 Series', 'Stylish', 'sty1.jpg', 10000, 2, 'Available'),
+(33, 'Ford Mustang', 'Stylish', 'sty2.jpg', 12000, 2, 'Available'),
+(34, 'Jaguar XF', 'Stylish', 'sty3.jpg', 9500, 4, 'Available'),
+(35, 'Audi Q3', 'Stylish', 'sty4.jpg', 11500, 2, 'Available'),
+(36, 'Mercedes Benz GLC', 'Stylish', 'sty5.jpg', 12000, 4, 'Available');
+(37, 'Traveller 3700', 'Traveller', 'T1.jpg', 5000, 5, 'Available'),
+(38, 'Traveller 4020', 'Traveller', 'T2.jpg', 5500, 6, 'Available'),
+(39, 'Traveller School Bus 3700', 'Traveller', 'T3.jpg', 6000, 6, 'Available'),
+(40, 'Traveller Force', 'Traveller', 'T4.png', 6500, 5, 'Available'),
+(41, 'Traveller School Bus 4020', 'Traveller', 'T5.jpg', 6000, 8, 'Available');
+
 
 User Login:
 CREATE TABLE `users` (
