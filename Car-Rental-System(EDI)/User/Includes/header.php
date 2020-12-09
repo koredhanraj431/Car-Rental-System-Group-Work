@@ -28,7 +28,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="images/profile.png" width="30" height="30" class="rounded-circle">
+                        <img src="/projects/Car-Rental-System(EDI)/User/images/profile.png" width="30" height="30" class="rounded-circle">
                         <?php  echo $_SESSION["username"]; ?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
