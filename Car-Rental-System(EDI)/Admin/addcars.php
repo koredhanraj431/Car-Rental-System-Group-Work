@@ -67,7 +67,7 @@ if (strlen($_SESSION['uname']) == 0) {
         </div>
 
         <div class="form-group">
-            <label class="col-md-3 control-label">Hire Cost : </label>
+            <label class="col-md-3 control-label">Hire Cost : (Per day)</label>
             <div class="col-md-8">
                 <input class="form-control" name="cost" type="text" required>
             </div>
