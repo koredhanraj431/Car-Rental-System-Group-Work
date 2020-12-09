@@ -23,7 +23,7 @@ if (!isset($_SESSION['username'])) {
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/3695790714.js" crossorigin="anonymous"></script>
   <link rel="icon" href="images/favicon-16x16.png">
-  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/styles.css">
   <title>Stylish Domain</title>
 
   <style>
