@@ -18,6 +18,7 @@ if (!isset($_SESSION['username'])) {
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="icon" href="images/favicon-16x16.png">
   <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="dstyles.css">
   <title>Standard Domain</title>
 
   <style>
@@ -62,7 +63,6 @@ if (!isset($_SESSION['username'])) {
         while ($rws = $rs5->fetch_assoc()) {
         ?>
           <tr>
-
             <td style="vertical-align:middle;" align="center"><?php echo $rws['car_id']; ?></td>
             <td> <img class="image" style="border-radius: 6px; height: 140px; width: 250px;" src="../Cars/<?php echo $rws['car_type']; ?>/<?php echo $rws['image']; ?>" alt="">
             </td>
@@ -72,9 +72,10 @@ if (!isset($_SESSION['username'])) {
             <?php if ($rws['status'] == 'Available') {
             ?>
               <td style="vertical-align:middle" align="center" class="text-success">Available</td>
-              <td style="vertical-align:middle" align="center"> <a class="btn btn-dark text-light" href="#" role="button" style="font-size: 15px; font-weight:bold">Book Car</a>
-              </td>
-
+              <form action="../bookcar.php" method="POST">
+                <td style="vertical-align:middle" align="center"> <button class="btn btn-dark text-light" style="font-size: 15px; font-weight:bold" name="car" value="<?php echo $rws['car_id']; ?>">Book Car</button>
+                </td>
+              </form>
             <?php
             } else {
             ?>
