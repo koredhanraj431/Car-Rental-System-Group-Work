@@ -33,6 +33,7 @@ if (!isset($_SESSION['username'])) {
 			color: black;
 			position: relative;
 			display: block;
+			font-weight: bold;
 		}
 
 		.caption h3 {
@@ -44,12 +45,33 @@ if (!isset($_SESSION['username'])) {
 
 		.formcontainer {
 			margin-left: 32%;
+			font-size: 20px;
 		}
 
 		html,
 		body {
 			max-width: 100%;
 			overflow-x: hidden;
+		}
+
+		h4 {
+			font-weight: bold;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		}
+
+		.image:hover {
+			transform: scale(1.2);
+		}
+
+		label {
+			font-size: 20px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			color: brown;
+		}
+
+		input {
+			font-size: 18px;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		}
 	</style>
 
@@ -60,33 +82,73 @@ if (!isset($_SESSION['username'])) {
 	<!-- navbar -->
 	<?php
 	if (strlen($_SESSION['username']) == 0) {
-		array_push($errors, "You must log in first");
-		include('Includes/errors.php');
+		$_SESSION['msg'] = "You must log in first";
 		header('location: index.php');
 	} else {
 		include('Includes/header.php');
 	}
 	?>
 	<section class="caption">
-		<h2 class="caption" style="text-align: center">Find You Dream Cars For Hire!</h2>
-		<h3 class="properties" style="text-align: center">Range Rovers - Mercedes Benz - Landcruisers</h3>
+		<h2 class="caption" style="text-align: center; color:sienna;">Find Your Dream Cars For Hire!</h2>
+		<h3 style="text-align: center; ">Range Rovers - Mercedes Benz - Landcruisers</h3>
 	</section>
-
-	<?php
-	$sel = "SELECT * FROM users WHERE username = '$username'";
-	$rs = $db->query($sel);
-	$rws = $rs->fetch_assoc();
-	?>
 
 	<div class="container formcontainer" style="margin-top: 50px;">
 		<div class="row">
-
-
 			<div class="col-md-9">
-
 				<form action="" class="form-horizontal" role="form" method="POST">
 
-					<h4>Enter Personal details : </h4><br>
+					<?php
+					$carid = $_POST['car'];
+					$qr = "SELECT * FROM cars WHERE car_id = '$carid'";
+					$res = $db->query($qr);
+					$rws = $res->fetch_assoc();
+					?>
+
+					<h4>Confirm Car Details : </h4><br>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Car Image : </label>
+						<div class="col-md-8 mx-auto">
+							<img class="image " style="border-radius: 6px; height: 140px; width: 250px;" src="../Cars/<?php echo $rws['car_type']; ?>/<?php echo $rws['image']; ?>"> </div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Car Id : </label>
+						<div class="col-md-8">
+							<input class="form-control" name="car_id" value="<?php echo $rws['car_id'] ?>" type="text" readonly>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Car Name : </label>
+						<div class="col-md-8">
+							<input class="form-control" name="car_name" value="<?php echo $rws['car_name'] ?>" type="text" readonly>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Hire Cost : </label>
+						<div class="col-md-8">
+							<input class="form-control" name="car_cost" value="<?php echo $rws['hire_cost'] ?>" type="text" readonly>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Capacity : </label>
+						<div class="col-md-8">
+							<input class="form-control" name="capacity" value="<?php echo $rws['capacity'] ?>" type="text" readonly>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Time-Span : </label>
+						<div class="col-md-8">
+							<input class="form-control" name="days" type="text" placeholder="(No of days car is required)" required>
+						</div>
+					</div>
+
+					<?php
+					$sel = "SELECT * FROM users WHERE username = '$username'";
+					$rs = $db->query($sel);
+					$rws = $rs->fetch_assoc();
+					?>
+
+					<h4>Confirm Personal Details : </h4><br>
 					<div class="form-group">
 						<label class="col-lg-3 control-label">Email : </label>
 						<div class="col-lg-8">
@@ -138,23 +200,12 @@ if (!isset($_SESSION['username'])) {
 							<input class="form-control" id="city" name="location" type="text" required>
 						</div>
 					</div>
-					<h4>Enter Car details : </h4><br>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Car Id : </label>
-						<div class="col-md-8">
-							<input class="form-control" name="car_id" type="text" required>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">No of Days Car is required : </label>
-						<div class="col-md-8">
-							<input class="form-control" name="days" type="text" required>
-						</div>
-					</div>
+
+
 					<div class="form-group">
 						<label class="col-md-3 control-label"></label>
 						<div class="col-md-8">
-							<input type="button" class="btn btn-primary" style="float: right;" name="p2p" value="Proceed to Pay"><br><br>
+							<input type="button" class="btn btn-dark" style="float: right;" name="p2p" value="Proceed to Pay"><br><br>
 						</div>
 					</div>
 				</form>
