@@ -20,21 +20,22 @@
   <body>
     <!-- navbar -->
     <?php
+      session_start();
       include('Includes/header.php');
     ?>
     <h2 class="text-center head">Post your Testimonial here, suggestions will always be appreciated!</h2>
     <div class="container mr-5 ml-5 mb-5">
-      <form>
+      <form method="post">
         <div class="form-group row">
           <label for="name" class="col-sm-2 col-form-label">Name:</label>
           <div class="col-sm-10">
-            <input type="name" class="form-control" id="inputName" placeholder="Your Name" required>
+            <input type="name" class="form-control" name="name"id="inputName" placeholder="Your Name" required>
           </div>
         </div>
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
           <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Your Email" required>
+            <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Your Email" required>
           </div>
         </div>
         <div class="form-group row">
@@ -57,10 +58,27 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Post a testimonial</button>
+            <button type="submit" name="sub" class="btn btn-primary">Post a testimonial</button>
           </div>
         </div>
       </form>
+      <?php
+
+      include('Includes/server.php');
+      if (isset($_POST['sub'])) {
+        // code...
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $msg = $_POST['message'];
+
+        $sql1 = "INSERT INTO testimonial (name, email, msg) VALUES('$name', '$email', '$msg')";
+        mysqli_query($db,$sql1);
+      }
+      if(mysqli_error($db))
+         echo " Record insertion error";
+       else
+         echo '<script>alert("Your Testimonial recorded Successfully")</script>';
+      ?>
     </div>
 
     <!-- Optional JavaScript -->
