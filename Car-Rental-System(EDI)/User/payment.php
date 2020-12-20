@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  include('Includes/server.php');
+  $username = $_SESSION['username'];
+  if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: index.php');
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -241,6 +251,7 @@
 </head>
 
 <body>
+
   <div class="container" style="margin-top: 20px; margin-bottom: 30px;">
     <div id="Checkout" class="inline">
         <h1>Pay Invoice</h1>
@@ -250,24 +261,28 @@
             <span class="amex"></span>
             <span class="discover"></span>
         </div>
-        
-        <form method="post">
+
+        <div class="Total">
+          <h4 class="ml-4 mt-3 mb-3">Total Amount: </h4>
+        </div>
+
+        <form method="post" action="success.php">
             <div class="form-group">
                 <label or="NameOnCard">Name on card</label>
-                <input id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
+                <input id="NameOnCard" class="form-control" type="text" name="name" maxlength="255"></input>
             </div>
             <div class="form-group">
                 <label for="CreditCardNumber">Card number</label>
-                <input id="CreditCardNumber" class="null card-image form-control" type="text"></input>
+                <input id="CreditCardNumber" name="card" class="null card-image form-control" type="text"></input>
             </div>
             <div class="expiry-date-group form-group">
                 <label for="ExpiryDate">Expiry date</label>
-                <input id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
+                <input id="ExpiryDate" class="form-control" name="exp" type="text" placeholder="MM / YY" maxlength="7"></input>
             </div>
             <div class="security-code-group form-group">
                 <label for="SecurityCode">CVV</label>
                 <div class="input-container" >
-                    <input id="SecurityCode" class="form-control" type="text" placeholder="3 digit number"></input>
+                    <input id="SecurityCode" class="form-control" name="cvv" type="text" placeholder="3 digit number"></input>
                     <i id="cvc" class="fa fa-question-circle"></i>
                 </div>
                 <div class="cvc-preview-container two-card hide">
@@ -278,15 +293,16 @@
             <div class="zip-code-group form-group">
                 <label for="ZIPCode">ZIP/Postal code</label>
                 <div class="input-container">
-                    <input id="ZIPCode" class="form-control" type="text" maxlength="10"></input>
+                    <input id="ZIPCode" name="zip" class="form-control" type="text" maxlength="10"></input>
                     <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Enter the ZIP/Postal code for your credit card billing address."><i class="fa fa-question-circle"></i></a>
                 </div>
             </div>
-            <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+            <button id="PayButton" name="submit" class="btn btn-block btn-success submit-button" type="submit">
                 <span class="submit-button-lock"></span>
                 <span class="align-middle">Pay and Book</span>
             </button>
         </form>
+
     </div>
   </div>
   <!-- Optional JavaScript -->
